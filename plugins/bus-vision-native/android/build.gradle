@@ -18,7 +18,7 @@ buildscript {
 apply plugin: 'com.android.library'
 
 android {
-    namespace = "com.chessman.busvision2.native"
+    namespace = "com.chessman.busvision2.busvisionnative"
     compileSdk = project.hasProperty('compileSdkVersion') ? rootProject.ext.compileSdkVersion : 36
     defaultConfig {
         minSdkVersion project.hasProperty('minSdkVersion') ? rootProject.ext.minSdkVersion : 24

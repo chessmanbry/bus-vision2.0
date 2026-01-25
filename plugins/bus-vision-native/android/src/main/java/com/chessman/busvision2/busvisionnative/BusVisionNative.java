@@ -1,4 +1,4 @@
-package com.chessman.busvision2.native;
+package com.chessman.busvision2.busvisionnative;
 
 import com.getcapacitor.Logger;
 
