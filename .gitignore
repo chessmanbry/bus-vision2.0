@@ -33,3 +33,14 @@ android/**/build/
 android/local.properties
 android/.idea/
 *.iml
+
+node_modules/
+dist/
+.env
+.env.*
+.DS_Store
+android/.gradle/
+android/.idea/
+android/**/build/
+android/local.properties
+*.iml
