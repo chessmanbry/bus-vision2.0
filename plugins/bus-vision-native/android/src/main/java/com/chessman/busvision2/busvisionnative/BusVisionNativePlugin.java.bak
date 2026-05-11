@@ -1,0 +1,62 @@
+package com.chessman.busvision2.busvisionnative;
+
+import com.getcapacitor.JSObject;
+import com.getcapacitor.Plugin;
+import com.getcapacitor.PluginCall;
+import com.getcapacitor.PluginMethod;
+import com.getcapacitor.annotation.CapacitorPlugin;
+
+@CapacitorPlugin(name = "BusVisionNative")
+public class BusVisionNativePlugin extends Plugin {
+
+    @PluginMethod
+    public void echo(PluginCall call) {
+        String value = call.getString("value", "");
+        JSObject ret = new JSObject();
+        ret.put("value", value);
+        call.resolve(ret);
+    }
+
+    @PluginMethod
+    public void startRecording(PluginCall call) {
+        call.reject("NOT_IMPLEMENTED");
+    }
+
+    @PluginMethod
+    public void stopRecording(PluginCall call) {
+        call.reject("NOT_IMPLEMENTED");
+    }
+
+    @PluginMethod
+    public void takePhoto(PluginCall call) {
+        call.reject("NOT_IMPLEMENTED");
+    }
+
+    @PluginMethod
+    public void setZoom(PluginCall call) {
+        JSObject ret = new JSObject();
+        ret.put("ok", false);
+        call.resolve(ret);
+    }
+
+    @PluginMethod
+    public void getFocusDistance(PluginCall call) {
+        JSObject ret = new JSObject();
+        ret.put("meters", JSObject.NULL);
+        call.resolve(ret);
+    }
+
+    @PluginMethod
+    public void setTorch(PluginCall call) {
+        JSObject ret = new JSObject();
+        ret.put("ok", false);
+        call.resolve(ret);
+    }
+
+    @PluginMethod
+    public void setNightMode(PluginCall call) {
+        JSObject ret = new JSObject();
+        ret.put("ok", false);
+        call.resolve(ret);
+    }
+}

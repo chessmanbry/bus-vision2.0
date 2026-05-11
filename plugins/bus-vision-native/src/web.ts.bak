@@ -1,0 +1,48 @@
+import { WebPlugin } from '@capacitor/core';
+import type { BusVisionNativePlugin } from './definitions';
+
+export class BusVisionNativeWeb extends WebPlugin implements BusVisionNativePlugin {
+  async echo(options: { value: string }): Promise<{ value: string }> {
+    return options;
+  }
+
+  async startRecording(): Promise<{ ok: boolean }> {
+    throw this.unavailable('startRecording is only available on native platforms.');
+  }
+
+  async stopRecording(): Promise<{
+    path: string;
+    filename: string;
+    mimeType: string;
+    durationMs?: number;
+    sizeBytes?: number;
+  }> {
+    throw this.unavailable('stopRecording is only available on native platforms.');
+  }
+
+  async takePhoto(): Promise<{
+    path: string;
+    filename: string;
+    mimeType: string;
+    width?: number;
+    height?: number;
+  }> {
+    throw this.unavailable('takePhoto is only available on native platforms.');
+  }
+
+  async setZoom(): Promise<{ ok: boolean }> {
+    throw this.unavailable('setZoom is only available on native platforms.');
+  }
+
+  async getFocusDistance(): Promise<{ meters: number | null }> {
+    return { meters: null };
+  }
+
+  async setTorch(): Promise<{ ok: boolean }> {
+    throw this.unavailable('setTorch is only available on native platforms.');
+  }
+
+  async setNightMode(): Promise<{ ok: boolean }> {
+    throw this.unavailable('setNightMode is only available on native platforms.');
+  }
+}
